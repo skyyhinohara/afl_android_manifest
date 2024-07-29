@@ -6,7 +6,7 @@
   <project path="external/calyx/datura" name="AfterlifeOS/external_calyx_datura" remote="gitea" />
   <project path="hardware/afterlife/interfaces" name="AfterlifeOS/hardware_afterlife_interfaces" />
   <project path="hardware/xiaomi" name="AfterlifeOS/hardware_xiaomi" />
-  <project path="manifest" name="afterlifeOS/android_manifest" />
+  <project path="manifest" name="AfterlifeOS/android_manifest" />
   <project path="packages/apps/AfterLab" name="AfterlifeOS/packages_apps_AfterLab" />
   <project path="packages/apps/GameSpace" name="AfterlifeOS/packages_apps_GameSpace" />
   <project path="packages/apps/ParanoidSense" name="AfterlifeOS/packages_apps_ParanoidSense" />
