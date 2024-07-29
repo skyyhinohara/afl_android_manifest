@@ -15,6 +15,9 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
+  <remote  name="gitlab"
+           fetch="https://gitlab.com" />
+
   <default revision="refs/heads/14"
            remote="github"
            sync-j="4" />
@@ -22,7 +25,7 @@
   <superproject name="platform/superproject" remote="aosp" revision="android-14.0.0_r35"/>
   <contactinfo bugurl="go/repo-bug" />
 
-  <project path="build/make" name="AfterifeOS/build" groups="pdk,sysui-studio">
+  <project path="build/make" name="AfterlifeOS/build" groups="pdk,sysui-studio">
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
     <linkfile dest="build/core" src="core" />
@@ -39,13 +42,13 @@
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
   <project path="build/pesto" name="platform/build/pesto" groups="pdk" remote="aosp" />
   <project path="build/release" name="platform/build/release" groups="pdk,tradefed" remote="aosp" />
-  <project path="build/soong" name="AfterifeOS/build_soong" groups="pdk,tradefed">
+  <project path="build/soong" name="AfterlifeOS/build_soong" groups="pdk,tradefed">
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
-  <project path="art" name="AfterifeOS/art" groups="pdk" />
+  <project path="art" name="AfterlifeOS/art" groups="pdk" />
   <project path="bionic" name="AfterlifeOS/bionic" groups="pdk" />
-  <project path="bootable/recovery" name="AfterifeOS/bootable_recovery" groups="pdk" remote="aosp" />
+  <project path="bootable/recovery" name="AfterlifeOS/bootable_recovery" groups="pdk" />
   <project path="bootable/libbootloader" name="platform/bootable/libbootloader" groups="vts,pdk" remote="aosp" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
@@ -140,7 +143,7 @@
   <project path="external/cpu_features" name="platform/external/cpu_features" groups="pdk" remote="aosp" />
   <project path="external/cpuinfo" name="platform/external/cpuinfo" groups="pdk" remote="aosp" />
   <project path="external/crcalc" name="platform/external/crcalc" groups="pdk" remote="aosp" />
-  <project path="external/cronet" name="AfterifeOS/external/cronet" groups="pdk" remote="gitea" />
+  <project path="external/cronet" name="AfterlifeOS/external_cronet" revision="14" groups="pdk" remote="gitea" />
   <project path="external/crosvm" name="platform/external/crosvm" groups="pdk" remote="aosp" />
   <project path="external/curl" name="platform/external/curl" groups="pdk" remote="aosp" />
   <project path="external/dagger2" name="platform/external/dagger2" groups="pdk" remote="aosp" />
@@ -219,7 +222,6 @@
   <project path="external/google-smali" name="platform/external/google-smali" groups="pdk" remote="aosp" />
   <project path="external/google-styleguide" name="platform/external/google-styleguide" groups="pdk" remote="aosp" />
   <project path="external/googletest" name="platform/external/googletest" groups="pdk" remote="aosp" />
-  <project path="external/gptfdisk" name="platform/external/gptfdisk" groups="pdk" remote="aosp" />
   <project path="external/grpc-grpc" name="platform/external/grpc-grpc" groups="pdk,tradefed" remote="aosp" />
   <project path="external/grpc-grpc-java" name="platform/external/grpc-grpc-java" groups="pdk,tradefed" remote="aosp" />
   <project path="external/gson" name="platform/external/gson" groups="pdk,tradefed" remote="aosp" />
@@ -875,7 +877,6 @@
   <project path="external/zucchini" name="platform/external/zucchini" groups="pdk" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" remote="aosp" />
   <project path="frameworks/base" name="AfterlifeOS/frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="aosp" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" remote="aosp" />
@@ -952,19 +953,6 @@
     <linkfile dest="hardware/qcom/sm7150/Android.mk" src="os_pickup.mk" />
     <linkfile dest="hardware/qcom/sm7150/Android.bp" src="os_pickup.bp" />
   </project>
-  <project path="hardware/qcom/sm7250/display" name="platform/hardware/qcom/sm7250/display" groups="qcom_sm7250" remote="aosp" />
-  <project path="hardware/qcom/sm7250/gps" name="platform/hardware/qcom/sm7250/gps" groups="qcom_sm7250" remote="aosp">
-    <linkfile dest="hardware/qcom/sm7250/Android.mk" src="os_pickup.mk" />
-    <linkfile dest="hardware/qcom/sm7250/Android.bp" src="os_pickup.bp" />
-  </project>
-  <project path="hardware/qcom/sm7250/media" name="platform/hardware/qcom/sm7250/media" groups="qcom_sm7250" remote="aosp" />
-  <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="platform/hardware/qcom/sm8150/data/ipacfg-mgr" groups="qcom_sm8150" remote="aosp">
-    <linkfile dest="hardware/qcom/sm8150/Android.mk" src="os_pickup.mk" />
-    <linkfile dest="hardware/qcom/sm8150/Android.bp" src="os_pickup.bp" />
-  </project>
-  <project path="hardware/qcom/sm8150/display" name="platform/hardware/qcom/sm8150/display" groups="qcom_sm8150" remote="aosp" />
-  <project path="hardware/qcom/sm8150/gps" name="platform/hardware/qcom/sm8150/gps" groups="qcom_sm8150" remote="aosp" />
-  <project path="hardware/qcom/sm8150/media" name="platform/hardware/qcom/sm8150/media" groups="qcom_sm8150" remote="aosp" />
   <project path="hardware/qcom/sm8150/thermal" name="platform/hardware/qcom/sm8150/thermal" groups="qcom_sm8150" remote="aosp" />
   <project path="hardware/qcom/sm8150/vr" name="platform/hardware/qcom/sm8150/vr" groups="qcom_sm8150" remote="aosp" />
   <project path="hardware/qcom/sm8150p/gps" name="platform/hardware/qcom/sm8150p/gps" groups="qcom_sm8150p" remote="aosp">
@@ -1032,7 +1020,7 @@
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="packages/apps/Contacts" name="AfterlifeOS/packages_apps_Contacts" groups="pdk-fs" />
-  <project path="packages/apps/DeskClock" name="LineageOS/packages/apps/DeskClock" groups="pdk-fs" revision="lineage-21.0" />
+  <project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" groups="pdk-fs" revision="lineage-21.0" />
   <project path="packages/apps/DevCamera" name="platform/packages/apps/DevCamera" groups="pdk" remote="aosp" />
   <project path="packages/apps/Dialer" name="AfterlifeOS/packages_apps_Dialer" groups="pdk-fs" />
   <project path="packages/apps/DocumentsUI" name="AfterlifeOS/packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" />

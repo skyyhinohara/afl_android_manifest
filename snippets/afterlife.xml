@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!-- AfterLife additions -->
+  <project path="frameworks/av" name="AfterlifeOS/frameworks_av" />
   <project path="device/afterlife/ota" name="AfterlifeOS/device_afterlife_ota" />
   <project path="device/afterlife/sepolicy" name="AfterlifeOS/device_afterlife_sepolicy" />
   <project path="external/calyx/datura" name="AfterlifeOS/external_calyx_datura" remote="gitea" />
