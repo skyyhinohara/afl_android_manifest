@@ -7,6 +7,7 @@
   <project path="external/openssh" name="LineageOS/android_external_openssh" revision="lineage-21.0" />
   <project path="external/rsync" name="LineageOS/android_external_rsync" revision="lineage-21.0" />
   <project path="external/unrar" name="LineageOS/android_external_unrar" revision="lineage-21.0" />
+  <project path="external/exfatprogs" name="LineageOS/android_external_exfatprogs" revision="lineage-21.0" />
   <project path="external/vim" name="LineageOS/android_external_vim" revision="lineage-21.0" />
   <project path="hardware/mediatek" name="LineageOS/android_hardware_mediatek" revision="lineage-21" />
   <project path="hardware/lineage/compat" name="LineageOS/android_hardware_lineage_compat" revision="lineage-21.0" />
